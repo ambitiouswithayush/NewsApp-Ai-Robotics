@@ -1,3 +1,10 @@
+import 'react-native-url-polyfill/auto';
+
+if (typeof window !== 'undefined' && !window.location) {
+  // @ts-ignore
+  window.location = new URL('http://localhost');
+}
+
 import { registerRootComponent } from 'expo';
 
 import App from './App';
